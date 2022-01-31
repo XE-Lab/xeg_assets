@@ -13,7 +13,7 @@ General:
 - Silenced some more logs/debugs
 - Trimmed some codes
 - Relax CPU latency requirements to save power 
-- Shitton Optimizes
+- Shittons of Optimizations
 - Some Minor Fixes
 - Remove magisk support (you can flash even unrooted)
 - Improved deep sleep
