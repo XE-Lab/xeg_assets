@@ -1,31 +1,32 @@
 # Biofrost | Realme 5 Series (trinket/r5x) Specific Changes
-##  02/05/2022 | trinket [UNRELEASED -- STILL WIP]
+##  02/05/2022 | trinket
 Mainline:
 - Compiled with latest Azure Clang 15.0
 - Added Various Useful BACKPORTS
 - Power Efficient Workqueues
 - Silenced a lot more loggings/tracing crap
 - Switch to Energy-Model
+- treewide: fixes and improvements
 
 General:
 - sched/fair: tuning
 - mm: some changes
 - lib/string: optimizations
-- iommu: msm: improved performance
-- msm: kgsl: some fixes
+- ashmem: improve performance
+- iommu: msm: improve performance
+- msm: kgsl: lots of changes/optimizations 
 - scripts/kallsyms: make it more effective
-- Switch to capacity based Energy Model
-- Added some more modifications to the Energy Model
 - qcacld: minor fixes/optimizations
 - sched/fair: optimizations
 - cpuidle: tweaks
 - kprofiles: some changes
+- cpu-boost: various fixes/optimizations
 - file system: various improvements
+- Added some more modifications to the Energy Model
 - Removed Qcom's PM_QoS Implementation
 - Some more minor improvements
-- Treewide: fixes and improvements underhood
 - Tuned for Performance and Battery Backup
-- Many other more!
+- Many other more! (i guess)
 
 ## 01/31/2022 | trinket
 Mainline:
