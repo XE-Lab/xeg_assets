@@ -5,7 +5,7 @@ Mainline:
 - Added Various Useful BACKPORTS
 - Power Efficient Workqueues
 - Silenced a lot more loggings/tracing crap
-- Switch to Energy-Model
+- Switch to capacity based Energy-Model
 - treewide: fixes and improvements
 
 General:
