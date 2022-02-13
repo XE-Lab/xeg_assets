@@ -1,4 +1,60 @@
 # Biofrost | Realme 5 Series (trinket/r5x) Specific Changes
+##  02/13/2022 | trinket
+Mainline:
+- Bump to rev1.4
+- Linux upstream 'v4.14.265', 'v4.14.266'
+- Imported WireGuard 'v1.0.20211208'
+- Introduced and Enabled: CPU_INPUT_BOOST
+- Introduced and Enabled UCLAMP
+- Introduce GPU Input-boost feature
+- Introduced and Enabled Adreno Idler
+- Implement UCLAMP Assist
+- ZRAM Improvements and Optimizations
+- Optimized energy model
+- Improved cpuidle
+- Improved Scheduler
+- Network Tweaks
+
+General:
+- cpu_input_boost: tuned freqs accordingly
+- cpufreq: Optimizations
+- uclamp: BACKPORTS
+- uclamp: Optimizations
+- uclamp: tuning
+- adrenoboost: tuning
+- adrenoboost: added conservative governor
+- adrenoboost: added conservative governor v2
+- adrenoboost: cut sum low freq bump 
+- adreno_idler: switch to count based instead of time based
+- adreno_idler: remove frequency bump
+- adreno_idler: fix-up type definitions
+- adreno_idler: fix-up some comments
+- adreno_idler: fix typos 
+- adreno idler: Ramp down more agressively
+- ZRAM: Optimizations, Improvements
+- cpuidle: some optimizations and improvements
+- Set ZRAM's Default Compression Algorithm to LZ4
+- Enabled: ZRAM Writeback
+- Increased ZRAM's size to 1.4GB
+- zsmalloc: Optimizations
+- thermal: Optimizations
+- Do not migrate if the prev_cpu is idle
+- arm/arm64: dts: Some improvements/fixes
+- mm: Optimizations
+- ext4: Optimizations
+- rcu: Fixes and Improvements
+- block: cfq-iosched: Micro Optimize
+- printk: few additions
+- net: sched: Optimizations
+- fq-codel: Improvements
+- BACKPORT: ipv6: Implement draft-ietf-6man-rfc4941bis
+- TCP_bbr: Improvements and optimizations
+- NET-tcp: Some tweaks
+-  Disabled a lot of tracing, logging, and debugging
+- Tons of backports for General Improvements
+- Many more under-the-hood improvements treewide
+- Many other more from latest Tags (.255/.256)
+
 ##  02/05/2022 | trinket
 Mainline:
 - Compiled with latest Azure Clang 15.0
