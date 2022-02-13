@@ -16,6 +16,8 @@ Mainline:
 - Network Tweaks
 
 General:
+- Disabled: CPU_BOOST
+- Disabled: SCHED_TUNE
 - cpu_input_boost: tuned freqs accordingly
 - cpufreq: Optimizations
 - uclamp: BACKPORTS
