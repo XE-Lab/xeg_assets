@@ -1,0 +1,22 @@
+Changelogs:
+- Clean rebase -- droped some useless stuff
+- Upstreamed to v4.14.276
+- EXFAT Backports
+- BBR Optimizations
+- Disable ZRAM drivers completely
+- Introduce and Enable ZSWAP + VBSWAP
+- ARM's Latest Optimized Routines - strcmp 
+- ARM's Latest Optimized Routines - strncmp
+- Optimize: memcpy, memmove, memset 
+- Rewrite: iommu/msm, ashmem
+- nuked some more loggings
+- Don't disable flashlight when battery <10%
+- Undervolt GPU (and relax it)
+- Picked bitmap optimizations from arter97
+- HRTimer Backports 
+- Drop adrenoboost/GPU Boost
+- Picked some KGSL optimizations/changes for improvements
+- misc changes and some under-the-hood improvements.
+
+NOTE:
+- Pre-release test-build / MAINTENANCE build  
