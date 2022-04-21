@@ -1,4 +1,5 @@
 Changelogs:
+- Compiled with Dora Clang 15.0.0 (linked with GNU Binutils, bfd chad)
 - Clean rebase -- droped some useless stuff
 - Upstreamed to v4.14.276
 - EXFAT Backports
