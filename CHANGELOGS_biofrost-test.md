@@ -8,10 +8,33 @@ By: mcdofrenchfreis
 
 ========================================
 
+Date: 28/04/22
+
+- Compiled with Cortex-A73.Cortex-A53+Crypto + 03 + POLLY (optimizations)
+- Upstream to v4.14.277
+- Reduced some more logspams/loggers
+- Blk-mq fixes
+- MSM_BUS fixes
+- Sched optimizations
+- Core.c optimizations
+- Add node tampering blacklist function
+- Update blocking blacklist
+- Increase thermal trip points to 16
+- Increase throttling limit
+- Don't qualify thermal polling as high priority
+- Schedutil optimizations
+- Initialize governors earlier
+- Introduce: Process Reclaim Low Memory Killer [PRLMK]
+- Tweak PRLMK's tuning a little bit (free file limit/free swap limit)
+- biofrost_defconfig: Set PELT half-life to 16
+- many more optimizations (that i'm lazy to include here)
+- misc.
+
+========================================
+
 Date: 24/04/22
 
 Changelog:
-- Compiled with Cortex-A73.Cortex-A53+Crypto + 03 + POLLY (optimizations)
 - Dropped 230422 sched ricing, Picked a much better one (can't list 1 by 1, it's 2 page on git)
 - schedutil: reduce frequencies slower
 - schedutil: make iowait boost more energy efficient
