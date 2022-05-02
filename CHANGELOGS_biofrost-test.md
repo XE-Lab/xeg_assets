@@ -1,10 +1,86 @@
 |==========| Biofrost - Test |=========|
 
 Device: Realme 5 series (r5x)
-Kernel Version: v4.14.276
-Compiler: Dora Clang 15.0.0
+Kernel Version: v4.14.277
+Compiler: Proton Clang 13.0.0 (20210522)
 Linker: GNU Binutils (ld.bfd)
 By: mcdofrenchfreis
+
+========================================
+
+Date: 02/05/22
+
+* Drop Process Reclaim Low Memory Killer (PRLMK)
+* Introduce and Enable Multi-generation LRU
+* Enable LMKD
+* Enable PSI
+* Some tweaks for process reclaim 
+* Some more optimizations for Memory Management
+* Switch to fq_codel queue discipline
+* Retune devfreq boost (drop it's boost input/wake duration + frequency)
+* Avoid devfreq competing with low-priority tasks
+* Compiled vDSO at -O3 Optimization level
+* Add NEON accelerated XOR impelementation
+* some more misc changes
+* Introduce and Enable adrenoboost (GPU Boost)
+* adrenoboost: finetuning algorithm - scale it a bit down
+* adrenoboost: make each level with different debount limits for frequency change
+* adrenoboost: add divider of the boosting for high frequency levels
+* adrenoboost: control aggressivity for very high frequencies
+* adrenoboost: damp down the aggressiveness in lowest frequency dividers
+* adrenoboost: tune adrenoboost (tweak)
+* adrenoboost: set to medium by default
+* adreno_tz, binder: reduce logspam
+* gpu: msm: reset the throttling limit (to avoid overheating on prolonged usage)
+* qcom: Do not re-enable the interrupt after hardirq handler
+* qcom: Relax wakeup source on failing to register IRQ
+* sched: Utilize more higher capacity cpus in asymmetric systems
+* sched: remove a duplicate trace print
+* sched: always panic when scheduling in atomic context
+* drop some MM commits for MGLRU's compatibility.
+* fsync: optimize double-fysnc a bunch
+* block, cfq: disable logging if trace is not enabled
+* blk: disable IO_STAT completely
+* kernel/cpuset: tweak top-app and foreground (uclamp)
+* biofrost_defconfig: re-adjust cib tuning
+* adrenoboost: set to low by default
+* sched: ideally use 10ms scheduling periods
+* binder_alloc: avoid page memory allocation in high memory
+* update LZ4 decompressor module
+* lz4: fix kernel decompression speed
+* lz4: explicitly support in-place decompression
+* lz4: declare LZ4_decompress_Safe_withPrefix64k static
+* lz4: document deliberate use of `&'
+* biofrost_defconfig: switch to LZ4 as default compress/decompress algorithm
+* treewide: Remove VLA usage (for more free memory + memory allocation nodes)
+* Switch to improved strnlen from glibc
+* Improve 3x faster integer sqrt
+* Implement the improved reciprocal_div algorithm
+* lib/brtree/string/csum: fixes and improvements
+* Move frequently used functions to headers and inline
+* Remove explicit barriers from mmio ops where unneeded
+* biofrost_defconfig: reduce log buffer to 4KB
+* biofrost_defconfig: Enable ramdisk/ramfs compression using LZ4
+* biofrost_defconfig: re-adjust CIB tuning
+* biofrost_defconfig: Enable Garbage Collector for userspace wakelocks
+* biofrost_defconfig: remove CPUFreq times driver
+* biofrost_defconfig: remove MSM event timer
+* biofrost_defconfig: disable syncookies
+* mm: don't hog the cpu and zone lock in rmqueue_bulk()
+* pdc: don't overwrite irq domain name on init
+* npu_dev: initialize mutex_lock earlier
+* pinctrl: don't lock around irq_set_irq_wake()
+* don't allow s2idle to be used
+* don't needlessly calculate diff time
+* remove unneeded time profiling from ringbuffer submision
+* disable adreno snapshot, coresight, and trace
+* mailbox: remove debug cruft
+* sync_file: speed up ioctl by omitting debug names
+* kgsl: increase worker thread priority
+* change default SCHED_RR timeslice from 100 ms to 1 jiffy
+* kallsyms: lower alignment on ARM
+* oppo_charger: enable fast charging
+* misc: implement usb fast charging mode
 
 ========================================
 
