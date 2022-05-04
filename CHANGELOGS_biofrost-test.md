@@ -8,6 +8,45 @@ By: mcdofrenchfreis
 
 ========================================
 
+Date: 04/05/2022
+
+* biofrost_defconfig: Enable PSTORE
+* biofrost_defconfig: Disable PAN Emulation
+* biofrost_defconfig: Reduce VBSWAP Disksize to 3GB
+* biofrost_defconfig: Bump devfreq_boost frequency
+* biofrost_defconfig: Disable CPUSS Dumping
+* biofrost_defconfig: Disable SLUB per CPU partial cache
+* biofrost_defconfig: Enable CONFIG_NET_SCH_FQ
+* biofrost_defconfig: Disable Profiling
+* biofrost_defconfig: Lower Input/Max Boost Frequency for Perf Cluster (CIB)
+* binder: Reserve cache for small, high frequency memory allocations
+* set binder_debug_mask=0 to suppress logging
+* disable watchdog during suspend
+* don't needlessly calculate diff time for cpuidle enter_state
+* Do not allow any wakelocks to be held at qcacld-3.0
+* include/linux/cgroup.h: export cgroup mutex
+* Guard debugfs_real_fops usage
+* some more mm commits for better quality of life
+* fix ridiculous strnlen usage at ipa_v3
+* fs: Reduce cache pressure
+* silence some more useless system logspams
+* trinket: use 67us latency for cdsp
+* qg-soc: don't drop SOC if still charging 
+* Minimize wakeup time
+* Make zlib compression optional for pstore
+* ion: Use a freezable unbound workqueue for the memory prefetch work items
+* kgsl: use DMA APIs for memory pool cache maintenance
+* binder: use pr_debug() instead of pr_*
+* BACKPORTS: locking/rwsem, locking/mutex, locking/qrwlock
+* fs: improve eventpoll logging to stop indicting timerfd
+* smp2p: add proper retrigger detection
+* smp2p: don't check for null before ipc_log_string()
+* smp2p: Add memory barrier for irq_pending
+* msm_venc: changes to improve quality
+* drivers/char: adsprpc: remove PM_QoS implementation
+
+========================================
+
 Date: 02/05/22
 
 * Drop Process Reclaim Low Memory Killer (PRLMK)
