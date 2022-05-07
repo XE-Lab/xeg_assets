@@ -2,9 +2,72 @@
 
 Device: Realme 5 series (r5x)
 Kernel Version: v4.14.277
-Compiler: Proton Clang 13.0.0 (20210522)
+Compiler: AOSP Clang 14.0.7 (8508608, based on r450784e)
 Linker: GNU Binutils (ld.bfd)
 By: mcdofrenchfreis
+
+========================================
+
+Date: 07/05/2022
+
+* Switch Clang Toolchain to Android (8508608, based on r450784e) clang version 14.0.7
+* Adapt "mm: consolidate page table accounting" to MGLRU
+* add seq_put_hex_II to speed up/proc/pid/maps
+* add seq_put_decimal_ull_width to speed up /proc/pid/smaps
+* add API to migrate the current process to a given cpumask
+* Perform PID map reads on the little CPU cluster
+* Micro-optimize PID map reads for arm64 while retaining output format
+* Use nents, orig_nents in struct sg_table correctly
+* Remove memory_state_time profiling support dependency
+* Implement a simple task exit notifier when disabled
+* Remove uid_sys_stats profiling subsystem dependency
+* Always overcommit mm by default
+* Move polynomial definition to separate header
+* Use consistent naming for CRC-32 polynomials
+* Optimize IPI pings to reduce system jitter
+* Use detach/attach netif instead of stop/wakeup
+* Mark CPU_INPUT_BOOST kthread as performance critical
+* sched/fair: use balanced sched latencies
+* sched/fair: reduce sched migration cost to 2ms
+* sched/fair: switch sched scaling to log
+* qos: Inline latency critical functions
+* devdw: increase polling rate
+* BACKPORT: arm64: mm: Use better bitmap_zalloc() 
+* BACKPORT: arm64: mm: Remove unused support for Device-GRE memory type
+* BACKPORT: arm64: acpi: Map EFI_MEMORY_WT memory as Normal-NC 
+* BACKPORT: arm64: mm: Remove unused support for Normal-WT memory type 
+* BACKPORT: arm64/mm: Drop SWAPPER_INIT_MAP_SIZE 
+* Lower devfreq boost frequency
+* Bump devfreq boost wake duration (1000ms)
+* Mark devfreq boost as performance critical
+* Add timeouts to wakelocks
+* Start killing wakelocks after one minute of idle
+* Expedite garbage collection if idle
+* Reduce the process timer to 50%
+* Optimize and make way for upstream changes on lpm-levels
+* Fix random jitter calculation of batman-adv
+* Revert "drivers: GICv3: Enable logging of interrupts that triggered wakeup"
+* lz4: reset to stock
+* lz4: update LZ4 decompressor module
+* lz4: staticify functions
+* lz4: remove unused functions
+* lz4_decompress: document deliberate use of `&'
+* lz4: fix kernel decompression speed
+* lz4: explicitly support in-place decompression
+* lz4: increase LZ4 memory usage to 32KB (improves compression ratio)
+* Revert "ANDROID: PM / Suspend: Print wall time at suspend entry and exit"
+* printk: add sleep time to timestamps
+* printk: add sleep time offset to all timestamps
+* binder: return EFAULT on failing copy_from_user()
+* kernel: use task struct instead of pid to check for zygote
+* kornel: boost whenever a zygote-forked process becomes a top app
+* kernel: Boost CPU freq to max upon top app changes according to set kernel profile
+* kernel: Boost DDR Bus to max upon top app changes according to set kernel profile
+* kernel: cgroup: nuke logging
+* Add Support for LD_DEAD_CODE_DATA_ELIMINATION
+* Enable DCE
+* Simply POLLY Options (for info about polly, here: https://polly.llvm.org/)
+
 
 ========================================
 
